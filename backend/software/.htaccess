@@ -1,0 +1,11 @@
+AuthName "RAMPU24"
+AuthType Basic
+AuthUserFile /chroot-jail-root/home/smartcoders/chefy/.htpasswd
+require valid-user
+
+# Isključi autentifikaciju za jednu skriptu
+<Files "redirect.php">
+    Satisfy Any
+    Order allow,deny
+    Allow from all
+</Files>

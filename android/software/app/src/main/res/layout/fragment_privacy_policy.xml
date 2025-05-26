@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Politika privatnosti"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorPrimary"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. Uvod"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ova Politika privatnosti objašnjava kako aplikacija 'Chefy' (dalje u tekstu: 'Aplikacija', 'mi', 'naš', 'nas') prikuplja, koristi, dijeli i štiti osobne podatke korisnika (dalje u tekstu: 'korisnik', 'vi', 'vaš'). Korištenjem Aplikacije, pristajete na uvjete ove Politike privatnosti. Ako se ne slažete s uvjetima, nemojte koristiti našu Aplikaciju."
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. Prikupljanje osobnih podataka"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mi prikupljamo različite vrste osobnih podataka od korisnika, uključujući:\n\n- Podaci koji se prikupljaju automatski: To uključuje informacije o vašem uređaju, poput IP adrese, vrsti uređaja, operativnom sustavu, geografskoj lokaciji, aktivnosti unutar Aplikacije, vrste mreže, vremena pristupa i druge tehničke informacije.\n\n- Podaci koje pružate: Prilikom registracije na našu Aplikaciju ili korištenja njezinih funkcionalnosti, možete pružiti osobne podatke kao što su ime, prezime, e-mail adresa, broj telefona, podaci o računu i ostale informacije potrebne za pružanje usluga."
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. Korištenje osobnih podataka"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Prikupljene osobne podatke koristimo u sljedeće svrhe:\n\n- Za pružanje i poboljšanje funkcionalnosti Aplikacije.\n- Za personalizaciju sadržaja i iskustva unutar Aplikacije.\n- Za komunikaciju s korisnicima, uključujući obavijesti, ažuriranja, promotivne ponude i obavijesti o novim značajkama.\n- Za analizu i poboljšanje performansi Aplikacije."
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4. Dijeljenje osobnih podataka"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mi ne prodajemo, iznajmljujemo niti razmjenjujemo osobne podatke korisnika s trećim stranama, osim u sljedećim slučajevima:\n\n- Službe trećih strana: Možemo angažirati treće strane (npr. analitičke usluge, pružatelje plaćanja) koji pomažu u vođenju Aplikacije i usluga.\n\n- Zakonska obveza: Ako to zahtijevaju zakoni ili regulatorni zahtjevi, možemo dijeliti osobne podatke s državnim ili zakonodavnim tijelima."
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5. Sigurnost podataka"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mi poduzimamo odgovarajuće tehničke i organizacijske mjere kako bismo zaštitili osobne podatke od neovlaštenog pristupa, izmjena, otkrivanja ili uništavanja. Međutim, nijedna metoda prijenosa ili pohrane podataka nije potpuno sigurna, pa ne možemo jamčiti apsolutnu sigurnost vaših podataka."
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="6. Prava korisnika"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Korisnici imaju pravo:\n\n- Pristupiti svojim osobnim podacima\n- Ispraviti netočne osobne podatke\n- Zatražiti brisanje svojih podataka\n- Opozvati privolu za obradu podataka u bilo kojem trenutku\n- Podnijeti pritužbu nadzornom tijelu"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="7. Kolačići"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kolačići su male datoteke koje pohranjujemo na vaš uređaj kako bismo poboljšali korisničko iskustvo, analizirali korištenje Aplikacije i prilagodili oglase. Korisnici mogu onemogućiti kolačiće putem postavki svog uređaja, no to može utjecati na funkcionalnost Aplikacije."
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="8. Promjene Politike privatnosti"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Zadržavamo pravo izmjene ove Politike privatnosti u bilo kojem trenutku. Sve promjene će biti objavljene na ovoj stranici i stupiti na snagu odmah nakon objave. Korisnici će biti obaviješteni o važnim promjenama putem aplikacije."
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="9. Kontakt"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ako imate bilo kakvih pitanja u vezi s ovom Politikom privatnosti ili želite ostvariti svoja prava, možete nas kontaktirati na:\n\nemail: support@chefyapp.com\ntelefon: +385 123 456 789"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginBottom="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Povratak"
+        app:backgroundTint="@color/colorPrimary"
+        app:tint="@color/colorSecondary"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_anchorGravity="bottom|end" />
+</FrameLayout>

@@ -1,0 +1,43 @@
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="categoryFirst"
+        android:title="Osnovne postavke - Za svakodnevne heroje">
+
+        <Preference
+            android:key="about_us"
+            android:title="O nama"
+            android:summary="Saznajte tko smo, što smo i zašto smo tako cool!"
+            android:icon="@drawable/ic_about_us" />
+
+        <Preference
+            android:key="privacy"
+            android:title="Privatnost"
+            android:summary="Vaša privatnost je naša svetinja. Ili barem trudimo se!"
+            android:icon="@drawable/ic_security" />
+
+        <Preference
+            android:key="help"
+            android:title="Pomoć"
+            android:summary="Trebaš pomoć? Ne brini, stižemo uz trubu i bubnjeve!"
+            android:icon="@drawable/ic_help" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Napredne postavke - Samo za profesionalce">
+
+        <SwitchPreferenceCompat
+            android:key="notifications"
+            android:title="Obavijesti"
+            android:summary="Nemoj ih ignorirati! One te stvarno vole."
+            android:defaultValue="true"
+            android:icon="@drawable/ic_notifications" />
+
+        <Preference
+            android:key="easter_egg"
+            android:title="Tajna postavka"
+            android:summary="Nemoj kliknuti na ovo! Ili ipak...?"
+            android:icon="@drawable/ic_secret" />
+    </PreferenceCategory>
+
+</androidx.preference.PreferenceScreen>

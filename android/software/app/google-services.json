@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1083835080674",
+    "project_id": "chefy-39886",
+    "storage_bucket": "chefy-39886.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1083835080674:android:86af3a4b7072117fbd63bb",
+        "android_client_info": {
+          "package_name": "hr.foi.rampu.chefy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBixHasCfRfXbbMgcYki22_72WRFNVeuWE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

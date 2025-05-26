@@ -1,0 +1,155 @@
+CREATE TABLE recipes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    description TEXT,
+    making_time BIGINT NOT NULL,
+    picture_path VARCHAR(2000),
+    category VARCHAR(255) NOT NULL,
+    id_user INT NOT NULL,
+    FOREIGN KEY (id_user) REFERENCES users(id) ON DELETE CASCADE
+);
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    password VARCHAR(1000) NOT NULL,
+	email VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE avatarOptionCategories (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE avatarOptions (
+    id_user INT NOT NULL,
+	id_avatarOptionCategory INT NOT NULL,
+	name VARCHAR(255) NOT NULL,
+	PRIMARY KEY (id_user, id_avatarOptionCategory),
+	FOREIGN KEY (id_user) REFERENCES users(id) ON DELETE CASCADE,
+	FOREIGN KEY (id_avatarOptionCategory) REFERENCES avatarOptionCategories(id) ON DELETE CASCADE
+);
+
+
+CREATE TABLE favourites (
+    id_user INT NOT NULL,
+    id_recipe INT NOT NULL,
+    PRIMARY KEY (id_user, id_recipe),
+    FOREIGN KEY (id_user) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (id_recipe) REFERENCES recipes(id) ON DELETE CASCADE
+);
+
+
+CREATE TABLE steps (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(255) NOT NULL,
+	description TEXT,
+	stage INT NOT NULL,
+	making_time BIGINT NOT NULL,
+	image_path VARCHAR(2000),
+	id_recipe INT,
+    FOREIGN KEY (id_recipe) REFERENCES recipes(id) ON DELETE CASCADE
+);
+
+
+CREATE TABLE steps (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(255) NOT NULL,
+	stage INT NOT NULL,
+	making_time BIGINT NOT NULL,
+	image_path VARCHAR(2000),
+	id_recipe INT,
+    FOREIGN KEY (id_recipe) REFERENCES recipes(id) ON DELETE CASCADE
+);
+
+CREATE TABLE units (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    display_name VARCHAR(50) NOT NULL
+);
+
+
+CREATE TABLE ingridients (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(255) NOT NULL
+);
+
+
+CREATE TABLE recipeIngridients (
+	id_ingridient INT NOT NULL,
+    id_recipe INT NOT NULL,
+	id_unit INT NOT NULL,
+	quantity DECIMAL (10,2) NOT NULL,
+    PRIMARY KEY (id_ingridient, id_recipe),
+    FOREIGN KEY (id_ingridient) REFERENCES ingridients(id) ON DELETE CASCADE,
+    FOREIGN KEY (id_recipe) REFERENCES recipes(id) ON DELETE CASCADE,
+	FOREIGN KEY (id_unit) REFERENCES units(id) ON DELETE CASCADE
+);
+
+
+
+
+
+
+
+
+INSERT INTO users (username, password, email) VALUES ('user','Rampu123','rampu@gmail.com');
+
+
+
+
+INSERT INTO avatarOptionCategories (name) VALUES 
+('Background'),
+('Skin'),
+('Hat'),
+('Eyes'),
+('Nose'),
+('Mustaches'),
+('Hair'),
+('Mouth'),
+('Bow'),
+('Shirt');
+
+INSERT INTO avatarOptions (id_user,id_avatarOptionCategory,name) VALUES 
+(1,1,'Background Sky'),
+(1,2,'Skin 3'),
+(1,3,'White Hat'),
+(1,4,'Blue Eyes'),
+(1,5,'Nose 1'),
+(1,6,'Mustache 1'),
+(1,7,'None'),
+(1,8,'Smile 1'),
+(1,9,'Bow Red'),
+(1,10,'Shirt White Rounded');
+
+
+
+
+
+
+
+
+
+
+
+
+INSERT INTO recipes (name, description, author, making_time, picture_paths) VALUES
+('Špageti Carbonara', 'Klasično talijansko jelo s jajima, sirom, pancetom i paprom', 'Mario Rossi', 1500000, 'images/spaghetti.jpg'),
+('Piletina Curry', 'Bogati curry s mekanim komadima piletine', 'Anita Sharma', 2400000, 'images/piletina_curry.jpg'),
+('Govedina Stroganoff', 'Rusko jelo s pirjanom govedinom i kremastim umakom', 'Ivan Petrov', 2100000, 'images/govedina_stroganoff.jpg'),
+('Povrtni Wok', 'Brzi wok s miješanim povrćem', 'Lily Chen', 900000, 'images/povrtni_wok.jpg'),
+('Pizza Margarita', 'Klasična pizza s rajčicama, mozzarellom i bosiljkom', 'Giulia Bianchi', 1800000, 'images/pizza_margarita.jpg'),
+('Losos Teriyaki', 'Grilani losos sa slatko-slanim teriyaki umakom', 'Kenji Sato', 1200000, 'images/losos_teriyaki.jpg'),
+('Tacos s Govedinom', 'Tacos s govedinom, salatom i sirom', 'Carlos Hernandez', 1500000, 'images/tacos_govedina.jpg'),
+('Grčka Salata', 'Osvježavajuća salata s rajčicama, krastavcima, maslinama i fetom', 'Sophia Papadopoulos', 600000, 'images/grcka_salata.jpg'),
+('Butter Chicken', 'Kremasti curry s piletinom u umaku od rajčice', 'Priya Patel', 2700000, 'images/butter_chicken.jpg'),
+('Juha od Leće', 'Kremasta juha od leće, povrća i začina', 'Amir Hassan', 1800000, 'images/juha_leca.jpg'),
+('Paella', 'Španjolsko jelo s rižom, morskim plodovima i povrćem', 'Luis Garcia', 3000000, 'images/paella.jpg'),
+('Cezar Salata', 'Salata s rimskom salatom, krutonima i Cezar dressingom', 'Emily Green', 900000, 'images/cezar_salata.jpg'),
+('Piletina Alfredo', 'Tjestenina u kremastom Alfredo umaku s piletinom', 'Samantha Lee', 1500000, 'images/piletina_alfredo.jpg'),
+('Shakshuka', 'Jaja poširana u začinjenom umaku od rajčice', 'Hassan Zayed', 1200000, 'images/shakshuka.jpg'),
+('Povrtni Curry', 'Aromatični curry s miješanim povrćem', 'Ravi Kumar', 1800000, 'images/povrtni_curry.jpg'),
+('Fish and Chips', 'Pržena riba s hrskavim pomfritom', 'Tom Smith', 1200000, 'images/fish_chips.jpg'),
+('Ramen', 'Japanska juha s rezancima, svinjetinom i povrćem', 'Akira Yamamoto', 2700000, 'images/ramen.jpg'),
+('Falafel Wrap', 'Falafel u pita kruhu s povrćem i tahinijem', 'Layla Habibi', 900000, 'images/falafel_wrap.jpg'),
+('BBQ Rebarca', 'Polako pečena rebarca s BBQ umakom', 'Jack Johnson', 7200000, 'images/bbq_rebarca.jpg'),
+('Palačinke', 'Mekane palačinke poslužene sa sirupom', 'Emma Wilson', 900000, 'images/palacinke.jpg');

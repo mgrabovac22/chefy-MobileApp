@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailRecipeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <ImageView
+                    android:id="@+id/tv_detail_recipe_picture"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    tools:src="@tools:sample/backgrounds/scenic" />
+
+                <Button
+                    android:id="@+id/back_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="8dp"
+                    android:textColor="@color/colorSecondary"
+                    android:layout_margin="15dp"
+                    android:text="Povratak"
+                    android:backgroundTint="@color/colorPrimary"/>
+
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_detail_recipe_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/black"
+                android:text="Naziv recepta"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tv_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/black"
+                android:text="Kategorija"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_status_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:elevation="8dp"
+                    android:text="Status:"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:elevation="8dp"
+                    android:text="Privatno"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_status_header"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:drawableRight="@drawable/ic_lock"
+                    android:gravity="center_vertical"
+                    />
+
+
+                <Button
+                    android:id="@+id/btnPublish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:elevation="8dp"
+                    android:enabled="false"
+                    android:text="Objavi"
+                    android:textColor="@color/colorSecondary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+            <TextView
+                android:id="@+id/tv_credits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="8dp"
+                android:textColor="@color/black"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="5dp"
+                android:text="Autor:"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/contentContainer"
+                android:layout_marginHorizontal="10dp"
+                >
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/avatarContainer"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    app:cardCornerRadius="100dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:visibility="invisible"
+
+                    >
+
+                    <ImageView
+                        android:id="@+id/imvBackground"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/avatar_background_sky"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        />
+
+                    <FrameLayout
+                        android:id="@+id/avatarBackground"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clipToPadding="false"
+                        android:paddingTop="5dp"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp">
+
+                        <ImageView
+                            android:id="@+id/imvShirt"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/avatar_shirt_white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+
+                            />
+
+                        <ImageView
+                            android:id="@+id/imvBase"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/avatar_base_3"
+
+                            app:layout_constraintBottom_toBottomOf="@+id/avatarContainer" />
+
+
+                        <ImageView
+                            android:id="@+id/imvBow"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerInside"
+                            app:layout_constraintBottom_toBottomOf="@+id/avatarContainer" />
+
+                        <ImageView
+                            android:id="@+id/imvHair"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerInside"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="@+id/avatarContainer" />
+
+
+                        <ImageView
+                            android:id="@+id/imvEyes"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/avatar_eyes_blue"
+                            app:layout_constraintBottom_toBottomOf="@+id/avatarContainer" />
+
+                        <ImageView
+                            android:id="@+id/imvMouth"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/avatar_mouth_smile"
+                            app:layout_constraintBottom_toBottomOf="@+id/avatarContainer" />
+
+
+                        <ImageView
+                            android:id="@+id/imvNose"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/avatar_nose_1"
+                            app:layout_constraintBottom_toBottomOf="@+id/avatarContainer" />
+
+                        <ImageView
+                            android:id="@+id/imvMustaches"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerInside"
+                            app:layout_constraintBottom_toBottomOf="@+id/avatarContainer" />
+
+                        <ImageView
+                            android:id="@+id/imvHat"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/avatar_hat_white"
+                            app:layout_constraintBottom_toBottomOf="@+id/avatarContainer" />
+
+
+                    </FrameLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/avatarContainer"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:id="@+id/tv_making_time_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="8dp"
+                android:textColor="@color/black"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="10dp"
+                android:text="Trajanje:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_making_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:text="XX min"
+                android:textColor="@color/black"
+                android:layout_gravity="bottom|end"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:id="@+id/tv_preparation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="8dp"
+                android:textColor="@color/black"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="10dp"
+                android:text="Opis:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:text="Ovdje ide opis recepta..."
+                android:textColor="@color/black"
+                android:layout_gravity="bottom|end"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_ingredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="10dp"
+                android:textColor="@color/black"
+                android:text="Sastojci"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_detail_ingredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginVertical="10dp"
+                android:text="Sastojci..."
+                android:textColor="@color/black" />
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="65sp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_preparation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="15dp"
+        app:backgroundTint="@color/colorPrimary"
+        app:tint="@color/colorSecondary"
+        android:src="@drawable/fab_preparation"
+        android:contentDescription="@string/fab_detail" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="15dp"
+        android:icon="@drawable/fab_preparation"
+        android:text="Generiraj popis"
+        android:textColor="@color/colorSecondary"
+        app:backgroundTint="@color/colorPrimary"
+        android:tint="@color/black"
+        android:contentDescription="Prikaži popis" />
+
+</FrameLayout>
